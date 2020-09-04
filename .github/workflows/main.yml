@@ -16,8 +16,8 @@ jobs:
     - name: build-push
       uses: docker/build-push-action@v1
       with:
-        username: ${{ secrets.usabud }}
-        password: ${{ secrets.1_Love_Docker! }}
+        username: ${{ secrets.DOCKER_USER_NAME }}
+        password: ${{ secrets.DOCKER_PW }}
         registry: docker.io
         repository: 3r1co/cd
         tag_with_sha: true
