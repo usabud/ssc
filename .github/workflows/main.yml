@@ -19,5 +19,5 @@ jobs:
         username: ${{ secrets.DOCKER_USER_NAME }}
         password: ${{ secrets.DOCKER_PW }}
         registry: docker.io
-        repository: 3r1co/cd
+        repository: usabud/ssc
         tag_with_sha: true
