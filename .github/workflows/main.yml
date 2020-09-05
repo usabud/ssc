@@ -1,0 +1,27 @@
+name: Build documentation
+
+on:
+  push:
+    branches:
+    - master
+jobs:
+
+  build:
+ 
+    runs-on: ubuntu-latest
+ 
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run SonarCloud
+      uses: sonarsource/sonarcloud-github-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+    - name: build-push
+      uses: docker/build-push-action@v1
+      with:
+        username: ${{ secrets.DOCKER_USER_NAME }}
+        password: ${{ secrets.DOCKER_PW }}
+        registry: docker.io
+        repository: usabud/ssc
+        tag_with_sha: true
