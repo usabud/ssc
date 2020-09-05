@@ -23,7 +23,7 @@ jobs:
   
     - name: Run SonarCloud
       uses: sonarcloud/analyse
-        with:
-          projectKey: usabud_ssc
-          orgnization: usabud
-          hostUrl: <predefined sonarcloud host url>
+      with:
+        projectKey: usabud_ssc
+        orgnization: usabud
+        hostUrl: <predefined sonarcloud host url>
