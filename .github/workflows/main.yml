@@ -26,4 +26,3 @@ jobs:
       with:
         projectKey: usabud_ssc
         orgnization: usabud
-        hostUrl: <predefined sonarcloud host url>
